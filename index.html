@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Book About Us ♡</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background-decor">
+        <span>♡</span>
+        <span>✿</span>
+        <span>✧</span>
+        <span>♡</span>
+        <span>✿</span>
+    </div>
+    
+<!-- LOVE VERIFICATION -->
+<main class="verification-container" id="verificationScreen">
+
+    <div class="verification-card">
+
+        <div class="verification-icon">♡</div>
+
+        <p class="small-label">A LITTLE SECRET CHECK</p>
+
+        <h1>Before You<br><i>Open This Book</i></h1>
+
+        <p class="verification-description">
+            Before entering, let's see how well
+            you remember our little story.
+        </p>
+
+        <form id="loveForm">
+
+            <label>01. What's your boyfriend's full name?</label>
+            <input
+                type="text"
+                id="boyfriendName"
+                placeholder="Enter his full name..."
+                required
+            >
+
+            <label>02. When is our anniversary?</label>
+            <input
+                type="text"
+                id="anniversaryDate"
+                placeholder="DD/MM/YYYY"
+                required
+            >
+
+            <button type="submit">
+                Unlock Our Book ♡
+            </button>
+
+        </form>
+
+        <p id="verificationMessage"></p>
+
+        <div class="verification-footer">
+            MADE WITH LOVE ♡
+        </div>
+
+    </div>
+
+</main>
+
+
+    <!-- COVER BUKU -->
+    <main class="container hidden" id="coverScreen">
+
+        <div class="book-cover">
+            <div class="cover-top">A SPECIAL LITTLE GIFT</div>
+
+            <div class="cover-decoration">✿</div>
+
+            <h1>A Little<br><i>Book</i> About Us</h1>
+
+            <p>A collection of little things<br>that mean a lot ♡</p>
+
+            <div class="cover-bottom">
+                <span>MADE WITH PARII</span>
+                <span>♡</span>
+            </div>
+        </div>
+
+        <p class="cover-caption">A little surprise just for you...</p>
+
+        <button class="open-button" onclick="openBook()">
+            Open Your Gift <span>♡</span>
+        </button>
+
+    </main>
+
+
+    <!-- ISI BUKU -->
+    <main class="book-container hidden" id="bookScreen">
+        
+        <!-- MUSIC CONTROL -->
+<button id="musicToggle" class="music-button" onclick="toggleMusic()">
+    ♫
+</button>
+
+        <div class="book-heading">
+            <span>♡ OUR LITTLE STORY ♡</span>
+            <p id="pageNumber">01 / 07</p>
+        </div>
+
+        <div class="book">
+
+            <!-- HALAMAN KIRI -->
+            <section class="book-page left-page" id="leftPage">
+                <div class="page-content" id="leftContent"></div>
+                <span class="page-number" id="leftNumber">01</span>
+            </section>
+
+            <!-- HALAMAN KANAN -->
+            <section class="book-page right-page" id="rightPage">
+                <div class="page-content" id="rightContent"></div>
+                <span class="page-number" id="rightNumber">02</span>
+            </section>
+
+        </div>
+
+        <div class="book-navigation">
+            <button id="prevBtn" onclick="changePage(-2)">
+                ← Previous
+            </button>
+
+            <span id="navigationText">Page 1–2</span>
+
+            <button id="nextBtn" onclick="changePage(2)">
+                Next →
+            </button>
+        </div>
+
+        <p class="bottom-note">Take your time, every page is made for you ♡</p>
+
+    </main>
+
+    <script src="script.js"></script>
+    <audio id="backgroundMusic" loop>
+    <source src="audio/penjagaHati.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
